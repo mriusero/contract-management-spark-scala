@@ -25,9 +25,9 @@ object MainBatch {
     df.show(20)
     println("***********************Resultat Question2*****************************")
     df.calculTTC().show(20)
-    /*
     println("***********************Resultat Question3*****************************")
     df.calculTTC.extractDateEndContratVille.show
+    /*
     println("***********************Resultat Question4*****************************")
     df.calculTTC.extractDateEndContratVille.contratStatus.show(20)
     */
