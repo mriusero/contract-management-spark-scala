@@ -15,6 +15,9 @@ object MainBatch {
       case "csv" => {
         ConfigurationParser.getCsvReaderConfigurationFromJson(Args.readerConfigurationFile)
       }
+      case "json" => {
+        ConfigurationParser.getJsonReaderConfigurationFromJson(Args.readerConfigurationFile)
+      }
 
       case _ => throw new Exception("Invalid reader type. Supported reader format : csv, json and xml in feature")
     }
