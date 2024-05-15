@@ -13,6 +13,13 @@ object ServiceVente {
         .withColumn("TVA", split(col("HTT_TVA"), "\\|")(1))
     }
 
+    def calculTTC(): DataFrame = {
+      dataFrame
+        .withColumn("HTT", regexp_replace(col("HTT"), ",", ".").cast("double"))
+        .withColumn("TVA", regexp_replace(col("TVA"), ",", ".").cast("double"))
+        .withColumn("TTC", round(col("HTT") + col("TVA") * col("HTT"), 2))
+        .drop("HTT", "TVA")
+    }
 
   }
 
