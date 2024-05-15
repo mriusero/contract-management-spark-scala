@@ -6,6 +6,7 @@
 # Exclude IntelliJ IDEA project files
 .idea/
 *.iml
+*.xml
 
 # Exclude Scala/Java compilation artifacts
 *.class
