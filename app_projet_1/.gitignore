@@ -1,0 +1,23 @@
+# Exclude directories and files created by sbt
+/target/
+/project/target/
+/project/project/
+
+# Exclude IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Exclude Scala/Java compilation artifacts
+*.class
+*.cache
+
+# Exclude log files
+*.log
+
+# Exclude temporary files
+*.tmp
+*.temp
+
+# Exclude OS-specific files
+.DS_Store
+Thumbs.db
