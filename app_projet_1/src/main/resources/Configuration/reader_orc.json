@@ -1,0 +1,11 @@
+{
+  "path": "src/main/resources/DataforTest/data.orc",
+  "format": "orc",
+  "schema": {
+    "fields": [
+      {"name": "Id_Client", "type": "int"},
+      {"name": "HTT_TVA", "type": "string"},
+      {"name": "MetaData", "type": "string"}
+    ]
+  }
+}

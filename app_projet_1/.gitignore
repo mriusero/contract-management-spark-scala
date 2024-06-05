@@ -3,6 +3,7 @@
 /project/target/
 /project/project/
 
+
 # Exclude IntelliJ IDEA project files
 .idea/
 *.iml
@@ -22,3 +23,5 @@
 # Exclude OS-specific files
 .DS_Store
 Thumbs.db
+
+DataConverter.ipynb

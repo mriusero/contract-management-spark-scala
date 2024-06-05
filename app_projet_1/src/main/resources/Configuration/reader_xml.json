@@ -1,0 +1,14 @@
+{
+  "path": "src/main/resources/DataforTest/data.xml",
+  "format": "xml",
+  "rootElement": "data",
+  "rowElement": "record",
+  "schema": {
+    "fields": [
+      {"name": "Id_Client", "type": "int"},
+      {"name": "HTT_TVA", "type": "string"},
+      {"name": "MetaData", "type": "string"}
+    ]
+  }
+}
+
