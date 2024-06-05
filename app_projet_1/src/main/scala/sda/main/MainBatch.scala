@@ -3,6 +3,7 @@ import org.apache.spark.sql.SparkSession
 import sda.args._
 import sda.parser.ConfigurationParser
 import  sda.traitement.ServiceVente._
+
 object MainBatch {
   def main(args: Array[String]): Unit = {
     implicit val spark: SparkSession = SparkSession
@@ -12,13 +13,12 @@ object MainBatch {
       .getOrCreate()
     Args.parseArguments(args)
     val reader = Args.readertype match {
-      case "csv" => {
-        ConfigurationParser.getCsvReaderConfigurationFromJson(Args.readerConfigurationFile)
-      }
-      case "json" => {
-        ConfigurationParser.getJsonReaderConfigurationFromJson(Args.readerConfigurationFile)
-      }
-      case _ => throw new Exception("Invalid reader type. Supported reader format : csv, json and xml in feature")
+      case "csv" => {ConfigurationParser.getCsvReaderConfigurationFromJson(Args.readerConfigurationFile)}
+      case "json" => {ConfigurationParser.getJsonReaderConfigurationFromJson(Args.readerConfigurationFile)}
+      case "orc" => {ConfigurationParser.getOrcReaderConfigurationFromJson(Args.readerConfigurationFile)}
+      case "parquet" => {ConfigurationParser.getParquetReaderConfigurationFromJson(Args.readerConfigurationFile)}
+      case "xml" => {ConfigurationParser.getXmlReaderConfigurationFromJson(Args.readerConfigurationFile)}
+      case _ => throw new Exception("Invalid reader type. Supported reader formats: csv, json, orc, xml, and parquet")
     }
     val df=reader.read().formatter()
     println("***********************Resultat Question1*****************************")

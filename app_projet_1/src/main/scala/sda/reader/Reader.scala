@@ -1,5 +1,4 @@
 package sda.reader
-
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 trait Reader  {

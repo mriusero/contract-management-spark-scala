@@ -8,14 +8,11 @@ object Args {
     required = true)
   var readerConfigurationFile: String = _
 
-
   @Parameter(
     names = Array("-rt", "--reader-type"),
     description = "Reader type ",
     required = true)
   var readertype: String = _
-
-
 
   def parseArguments(args: Array[String]) = {
     new JCommander(this, args.toArray: _*)
