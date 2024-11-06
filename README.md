@@ -1,5 +1,4 @@
 # Contract Management Application (Spark/Scala/SBT)
-<<<<<<< Updated upstream
 
 ## Overview
 
@@ -139,4 +138,3 @@ This repository contains a Scala-based application developed using Apache Spark 
 ## License
 
 > **Note**: The code in this repository is not licensed under the MIT License. It is owned by the original project owner and subject to their license terms.
->>>>>>> Stashed changes
